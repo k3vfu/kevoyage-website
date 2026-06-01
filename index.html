@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="icon" href="icon.png">
+<meta name="robots" content="noindex, nofollow"><title>Kevoyage – Dein smarter Reisebegleiter</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box }
+  body { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background: #07071a; color: #f0f0f5; min-height: 100vh; display: flex; flex-direction: column; align-items: center }
+  .container { max-width: 800px; width: 100%; padding: 48px 24px; text-align: center }
+  .logo { width: 80px; height: 80px; border-radius: 18px; margin-bottom: 12px; box-shadow: 0 4px 20px rgba(0,0,0,.3) }
+  h1 { font-size: 2.4rem; font-weight: 800; letter-spacing: -.02em; background: linear-gradient(135deg,#f0f0f5,#8888cc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text }
+  .subtitle { font-size: 1.1rem; color: #8888aa; margin: 8px 0 32px; line-height: 1.5 }
+  .badges { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 48px }
+  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 14px; font-weight: 600; font-size: .9rem; text-decoration: none; transition: transform .15s,box-shadow .15s }
+  .badge:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.3) }
+  .badge-appstore { background: #0a0a1a; border: 1px solid #333366; color: #f0f0f5 }
+  .badge-playstore { background: #1a1a3a; border: 1px solid #4444aa; color: #f0f0f5 }
+  .badge svg { width: 22px; height: 22px; flex-shrink: 0 }
+  .features { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 16px; text-align: left; margin-bottom: 48px }
+  .feature { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 20px; transition: background .2s }
+  .feature:hover { background: rgba(255,255,255,.07) }
+  .feature-icon { font-size: 28px; margin-bottom: 8px }
+  .feature-title { font-weight: 700; font-size: .95rem; margin-bottom: 4px }
+  .feature-desc { font-size: .82rem; color: #8888aa; line-height: 1.5 }
+  footer { color: #555577; font-size: .8rem; padding: 24px; border-top: 1px solid rgba(255,255,255,.04); width: 100%; text-align: center }
+  .footer-links { margin-bottom: 8px }
+  .footer-links a { color: #7777aa; text-decoration: none }
+  .footer-links a:hover { color: #aaaadd }
+  .legal { display: none; max-width: 500px; margin: 12px auto; padding: 16px; background: rgba(255,255,255,.04); border-radius: 12px; text-align: left; font-size: .82rem; line-height: 1.5; color: #aaaacc }
+  .legal h3 { font-size: .9rem; margin-bottom: 8px; color: #ddddef }
+  .legal p { margin-bottom: 6px }
+  .legal.show { display: block }
+  .copy { color: #444466; margin-top: 8px }
+  @media (max-width:600px) { h1 { font-size: 1.8rem } .badge { width: 100%; justify-content: center } }
+</style>
+</head>
+<body>
+<div class="container">
+  <img class="logo" src="icon.png" alt="Kevoyage">
+  <h1>Kevoyage</h1>
+  <p class="subtitle">Dein smarter Reisebegleiter – Reiseplan, eSIM, Übersetzer, Währungsrechner & mehr. <br>Alles in einer App. Immer dabei.</p>
+
+  <div class="badges">
+    <a class="badge badge-appstore" href="#">Im App Store laden</a>
+    <a class="badge badge-playstore" href="#">Bei Google Play laden</a>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">🗓️</div>
+      <div class="feature-title">Reiseplan</div>
+      <div class="feature-desc">Erstelle detaillierte Reisepläne mit Flügen, Hotels, Aktivitäten und Notizen – alles an einem Ort.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🤖</div>
+      <div class="feature-title">KI-Assistent</div>
+      <div class="feature-desc">Stell Fragen zu deiner Reise, lass dir Vorschläge machen oder Übersetzungen liefern – Amigo hilft dir jederzeit.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🌍</div>
+      <div class="feature-title">Übersetzer</div>
+      <div class="feature-desc">Übersetze Wörter und Sätze in Echtzeit – kein Internet nötig, ideal unterwegs.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">💱</div>
+      <div class="feature-title">Währungsrechner</div>
+      <div class="feature-desc">Rechne Beträge zwischen verschiedenen Währungen um – praktisch für unterwegs.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🗺️</div>
+      <div class="feature-title">Bereiste Länder</div>
+      <div class="feature-desc">Sieh auf einer Karte, wo du schon warst – Tracke deine Reisen visuell.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🚴</div>
+      <div class="feature-title">In Bewegung</div>
+      <div class="feature-desc">Zeichne Radtouren, Wanderungen und Läufe auf – inklusive Karte und Route.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="#" onclick="toggleLegal('impressum');return false">Impressum</a>
+    &middot;
+    <a href="#" onclick="toggleLegal('datenschutz');return false">Datenschutz</a>
+  </div>
+  <div id="impressum" class="legal">
+    <h3>Impressum</h3>
+    <p><strong>Angaben gemäß §5 TMG</strong></p>
+    <p>Kevin Funkner<br>
+    Feldstraße 28<br>
+    89250 Senden</p>
+    <p><strong>Kontakt</strong><br>
+    E-Mail: hey@kevoyage.app</p>
+  </div>
+  <div id="datenschutz" class="legal">
+    <h3>Datenschutzerklärung</h3>
+    <p><strong>Verantwortlicher</strong><br>
+    Kevin Funkner, Feldstraße 28, 89250 Senden, hey@kevoyage.app</p>
+
+    <p><strong>1. Überblick</strong><br>
+    Diese Datenschutzerklärung informiert Dich über die Erhebung und Verarbeitung personenbezogener Daten in der Kevoyage App (nachfolgend „App“). Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.</p>
+
+    <p><strong>2. Welche Daten werden erhoben und wofür?</strong></p>
+    <p><strong>2.1 Reiseplan & Profil</strong><br>
+    Du kannst in der App ein Profil (Name, Avatar) anlegen sowie Reisepläne mit Daten, Orten, Flügen, Hotels, Aktivitäten und Notizen erstellen. Diese Daten werden ausschließlich lokal auf Deinem Gerät gespeichert (localStorage) und nicht ohne Dein Zutun an Dritte übermittelt.</p>
+
+    <p><strong>2.2 Cloud-Sync (optional)</strong><br>
+    Wenn Du Dich mit Deinem Google-Konto anmeldest, werden Dein Profil und Deine Reisepläne über Firebase (Google LLC) in der Europäischen Union synchronisiert. Dies ermöglicht Dir die Wiederherstellung Deiner Daten auf einem neuen Gerät und das Teilen von Reisen mit Mitreisenden. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Du kannst die Verknüpfung jederzeit löschen.</p>
+
+    <p><strong>2.3 Standortdaten</strong><br>
+    Für die Funktionen „Flughafen in der Nähe“, Wetteranzeige und Aktivitätenerkennung kann die App auf Deinen Standort zugreifen. Dies geschieht nur nach Deiner ausdrücklichen Einwilligung und nur, wenn Du die entsprechende Funktion nutzt. Die Standortdaten werden nicht gespeichert oder an Dritte weitergegeben.</p>
+
+    <p><strong>2.4 Kamera & Mikrofon</strong><br>
+    Die App kann auf Deine Kamera zugreifen (z. B. zum Scannen von QR-Codes) und auf Dein Mikrofon (für Spracheingabe im Übersetzer und Chat-Sprachnachrichten). Dies geschieht nur nach Deiner Einwilligung und nur während der aktiven Nutzung der jeweiligen Funktion. Eine Speicherung oder Übermittlung der Audio-/Bilddaten erfolgt nur auf Deine explizite Anweisung hin.</p>
+
+    <p><strong>2.5 Push-Benachrichtigungen</strong><br>
+    Nach Deiner Einwilligung können wir Dir Push-Benachrichtigungen senden (z. B. bei neuen Chat-Nachrichten von Mitreisenden). Du kannst diese Berechtigung jederzeit in den Geräteeinstellungen widerrufen.</p>
+
+    <p><strong>2.6 QR-Code Sharing</strong><br>
+    Wenn Du eine Reise über QR-Code teilst, wird eine temporäre Kennung in der Firebase Realtime Database gespeichert. Mitreisende können über diese Kennung die Reisedaten abrufen. Die Kennung wird automatisch gelöscht, wenn der QR-Code nicht mehr genutzt wird.</p>
+
+    <p><strong>2.7 KI-Assistent (Amigo)</strong><br>
+    Der KI-Assistent nutzt die von Dir eingegebenen Fragen, um kontextbezogene Antworten zu Deiner Reise zu geben. Die Anfragen können zur Verarbeitung an einen Drittanbieter (z. B. OpenRouter) übermittelt werden. Es werden keine personenbezogenen Daten über die Anfrage hinaus gespeichert.</p>
+
+    <p><strong>2.8 Übersetzer</strong><br>
+    Übersetzungen können über eine externe API (argospm.com) verarbeitet werden. Der eingegebene Text wird zur Übersetzung übermittelt, aber nicht gespeichert.</p>
+
+    <p><strong>2.9 Währungsrechner</strong><br>
+    Die Wechselkurse werden von der offenen API frankfurter.app abgerufen. Es werden keine personenbezogenen Daten übermittelt.</p>
+
+    <p><strong>3. Drittanbieter & Drittländer</strong><br>
+    Folgende Dienste werden in der App genutzt, die personenbezogene Daten verarbeiten können:</p>
+    <p>• <strong>Firebase (Google LLC)</strong> – Authentifizierung, Firestore-Datenbank, Realtime Database. Standorte der Server: Europäische Union. Datenschutzerklärung: <a href="https://policies.google.com/privacy" target="_blank" style="color:#8888cc">policies.google.com/privacy</a></p>
+    <p>• <strong>OpenRouteService</strong> – Routenberechnung für Aktivitäten.<br>
+    • <strong>Open-Meteo</strong> – Wetterdaten.<br>
+    • <strong>argospm.com</strong> – Übersetzungen.<br>
+    • <strong>frankfurter.app</strong> – Wechselkurse.</p>
+    <p>Eine Übermittlung in Drittländer erfolgt nur, wenn dies für die Funktionserbringung erforderlich ist und angemessene Garantien gemäß Art. 44-49 DSGVO bestehen.</p>
+
+    <p><strong>4. Speicherdauer</strong><br>
+    Deine Daten verbleiben auf Deinem Gerät, bis Du sie löschst oder die App deinstallierst. Cloud-gesicherte Daten werden bei Löschung Deines Accounts innerhalb von 30 Tagen entfernt. Temporäre Daten (QR-Codes, Sitzungsdaten) werden automatisch gelöscht, sobald der Zweck entfällt.</p>
+
+    <p><strong>5. Deine Rechte</strong><br>
+    Du hast jederzeit das Recht auf:</p>
+    <p>• Auskunft über die gespeicherten Daten (Art. 15 DSGVO)<br>
+    • Berichtigung unrichtiger Daten (Art. 16 DSGVO)<br>
+    • Löschung Deiner Daten (Art. 17 DSGVO)<br>
+    • Einschränkung der Verarbeitung (Art. 18 DSGVO)<br>
+    • Datenübertragbarkeit (Art. 20 DSGVO)<br>
+    • Widerruf erteilter Einwilligungen (Art. 7 Abs. 3 DSGVO)<br>
+    • Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO)</p>
+    <p>Zur Ausübung Deiner Rechte kontaktiere uns unter: hey@kevoyage.app</p>
+
+    <p><strong>6. Datensicherheit</strong><br>
+    Die App speichert Daten standardmäßig lokal auf Deinem Gerät. Die Übertragung von Daten zu Firebase erfolgt ausschließlich verschlüsselt über HTTPS. Wir treffen angemessene technische und organisatorische Maßnahmen, um Deine Daten vor Verlust, Zugriff und Missbrauch zu schützen.</p>
+
+    <p><strong>7. Keine Werbung & kein Tracking</strong><br>
+    Die App enthält keine Werbung, keine Analyse-Tools (wie Google Analytics) und kein Nutzer-Tracking. Es werden keine Daten zu Werbezwecken verarbeitet oder an Werbenetzwerke weitergegeben.</p>
+
+    <p><strong>8. Externe Links</strong><br>
+    Links zum App Store und Google Play führen zu Diensten Dritter. Für die Datenverarbeitung dort sind die jeweiligen Anbieter verantwortlich.</p>
+
+    <p><strong>9. Änderungen dieser Datenschutzerklärung</strong><br>
+    Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie an geänderte Rechtslagen oder App-Funktionen anzupassen. Die jeweils aktuelle Version ist unter dieser Adresse abrufbar.</p>
+
+    <p><em>Stand: Juni 2026</em></p>
+  </div>
+  <div class="copy">Kevoyage &copy; 2026</div>
+</footer>
+<script>
+function toggleLegal(id) {
+  var el = document.getElementById(id);
+  var other = id === 'impressum' ? document.getElementById('datenschutz') : document.getElementById('impressum');
+  other.classList.remove('show');
+  el.classList.toggle('show');
+}
+</script>
+</body>
+</html>
