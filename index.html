@@ -17,6 +17,7 @@
   .badge:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.3) }
   .badge-appstore { background: #0a0a1a; border: 1px solid #333366; color: #f0f0f5 }
   .badge-playstore { background: #1a1a3a; border: 1px solid #4444aa; color: #f0f0f5 }
+  .badge-apk { background: #1a2a1a; border: 1px solid #44aa44; color: #f0f0f5 }
   .badge svg { width: 22px; height: 22px; flex-shrink: 0 }
   .features { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 16px; text-align: left; margin-bottom: 48px }
   .feature { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 20px; transition: background .2s }
@@ -40,11 +41,12 @@
 <div class="container">
   <img class="logo" src="icon.png" alt="Kevoyage">
   <h1>Kevoyage</h1>
-  <p class="subtitle">Dein smarter Reisebegleiter – Reiseplan, eSIM, Übersetzer, Währungsrechner & mehr. <br>Alles in einer App. Immer dabei.</p>
+  <p class="subtitle">Dein smarter Reisebegleiter – Reiseplan, Übersetzer, Währungsrechner & mehr. <br>Alles in einer App. Immer dabei.</p>
 
   <div class="badges">
-    <a class="badge badge-appstore" href="#">Im App Store laden</a>
-    <a class="badge badge-playstore" href="#">Bei Google Play laden</a>
+    <a class="badge badge-apk" href="kevoyage.apk" download>📦 APK direkt laden</a>
+    <a class="badge badge-appstore" href="#">In Kürze im App Store</a>
+    <a class="badge badge-playstore" href="#">In Kürze im Google Play Store</a>
   </div>
 
   <div class="features">
